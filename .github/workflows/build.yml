@@ -13,7 +13,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      HUGO_VERSION: ( ${{ inputs.hugo_version }} != ""  && 0.140.2 ) || ${{ inputs.hugo_version }}
+      HUGO_VERSION: ( "${{ inputs.hugo_version }}" != ""  && 0.140.2 ) || ${{ inputs.hugo_version }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
