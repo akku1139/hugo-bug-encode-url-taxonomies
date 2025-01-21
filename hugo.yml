@@ -1,0 +1,12 @@
+title: Bug report
+
+theme: hugo-starter-theme
+
+taxonomies:
+  category: category
+
+hasCJKLanguage: true
+
+permalinks:
+  term:
+    category: /:slug/

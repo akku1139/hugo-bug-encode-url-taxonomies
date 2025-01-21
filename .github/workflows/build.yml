@@ -1,0 +1,41 @@
+name: Deploy
+
+on:
+  push:
+  workflow_dispatch:
+    inputs:
+      hugo_version:
+        type: string
+        required: false
+        default: 0.140.2
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      HUGO_VERSION: ${{ inputs.hugo_version }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Hugo
+        run: |
+          wget --no-verbose -O ${{ runner.temp }}/hugo.tar.gz \
+            https://github.com/gohugoio/hugo/releases/download/v${{ env.HUGO_VERSION }}/hugo_extended_${{ env.HUGO_VERSION }}_linux-amd64.tar.gz &&
+          mkdir -p bin &&
+          tar zxvf ${{ runner.temp }}/hugo.tar.gz -C ./bin/
+
+      - name: Build
+        run: |
+          ./bin/hugo
+
+      - run: find
+
+      - run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add -A
+            git commit -m "Data"
+            git push
+          fi
