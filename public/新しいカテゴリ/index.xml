@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>新しいカテゴリ on Bug report</title>
+    <link>/%E6%96%B0%E3%81%97%E3%81%84%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA/</link>
+    <description>Recent content in 新しいカテゴリ on Bug report</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="/%E6%96%B0%E3%81%97%E3%81%84%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HTML Non-ASCII</title>
+      <link>/%E6%96%B0%E3%81%97%E3%81%84%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA/4770/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/%E6%96%B0%E3%81%97%E3%81%84%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA/4770/</guid>
+      <description>HTML + Non-ASCII url and category</description>
+    </item>
+  </channel>
+</rss>
